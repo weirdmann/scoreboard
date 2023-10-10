@@ -1,0 +1,33 @@
+
+
+GET http://localhost:2137/stream/scoreboard/score/newGame HTTP/1.1
+###
+
+GET http://localhost:5173/stream/scoreboard/score HTTP/1.1
+###
+
+GET http://localhost:2137/stream/scoreboard/score/switchsides HTTP/1.1
+###
+
+POST http://localhost:2137/stream/scoreboard/score/ HTTP/1.1
+content-type: application/json
+
+{
+    "playerindex" : 0,
+    "score" : 0
+}
+
+###
+
+POST http://localhost:2137/stream/scoreboard/score/updateplayername HTTP/1.1
+content-type: application/json
+
+{
+    "playerIndex" : 1,
+    "name" : "skryba TV"
+}
+
+###
+
+
+

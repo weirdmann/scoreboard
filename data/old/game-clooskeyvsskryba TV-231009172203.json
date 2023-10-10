@@ -1,0 +1,122 @@
+{
+  "id": "231009155054:42-Reductionist-135",
+  "state": {
+    "players": [
+      {
+        "name": "clooskey",
+        "score": 0
+      },
+      {
+        "name": "skryba TV",
+        "score": 0
+      }
+    ]
+  },
+  "history": [
+    {
+      "change": "init",
+      "state": {
+        "players": [
+          {
+            "name": "",
+            "score": 0
+          },
+          {
+            "name": "",
+            "score": 0
+          }
+        ]
+      }
+    },
+    {
+      "change": "players switched sides",
+      "state": {
+        "players": [
+          {
+            "name": "player2",
+            "score": 0
+          },
+          {
+            "name": "player1",
+            "score": 0
+          }
+        ]
+      }
+    },
+    {
+      "change": "players switched sides",
+      "state": {
+        "players": [
+          {
+            "name": "player1",
+            "score": 0
+          },
+          {
+            "name": "player2",
+            "score": 0
+          }
+        ]
+      }
+    },
+    {
+      "change": "players switched sides",
+      "state": {
+        "players": [
+          {
+            "name": "player2",
+            "score": 0
+          },
+          {
+            "name": "player1",
+            "score": 0
+          }
+        ]
+      }
+    },
+    {
+      "change": "players switched sides",
+      "state": {
+        "players": [
+          {
+            "name": "player1",
+            "score": 0
+          },
+          {
+            "name": "player2",
+            "score": 0
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 name updated to clooskey",
+      "state": {
+        "players": [
+          {
+            "name": "clooskey",
+            "score": 0
+          },
+          {
+            "name": "player2",
+            "score": 0
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 name updated to skryba TV",
+      "state": {
+        "players": [
+          {
+            "name": "clooskey",
+            "score": 0
+          },
+          {
+            "name": "skryba TV",
+            "score": 0
+          }
+        ]
+      }
+    }
+  ]
+}
