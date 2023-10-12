@@ -101,9 +101,6 @@
 </main>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Arvo");
-  /* box sizing */
-
   :root {
     box-sizing: border-box;
     background-color: black;
@@ -142,7 +139,7 @@
     display: block;
     padding-inline: 1rem;
     color: white;
-    font-family: "Arvo", serif;
+    font-family: sans-serif;
     font-size: 2em;
   }
 
