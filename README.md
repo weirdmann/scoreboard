@@ -21,7 +21,4 @@ npm install
 # Finally, run the development environment locally
 npm run dev
 
-# or add a --host option to host publicly
-npm run dev --host
-
 ```
