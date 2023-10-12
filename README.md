@@ -7,6 +7,7 @@
 git clone https://github.com/weirdmann/scoreboard
 
 # or download the .zip file using the green button above
+# and unpack
 
 # cd into the folder
 cd scoreboard
