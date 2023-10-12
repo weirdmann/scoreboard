@@ -147,7 +147,7 @@
     color: white;
     font-size: 3em;
     font-weight: bold;
-    font-family: "Arvo", serif;
+    font-family: sans-serif;
     text-align: center;
     min-width: 1em;
   }
