@@ -15,10 +15,13 @@ git clone https://github.com/weirdmann/scoreboard
 # cd into the folder
 cd scoreboard
 
-# run the development environment
+# install the dependencies
+npm install
+
+# Finally, run the development environment locally
 npm run dev
 
-# add a --host option to host publicly
+# or add a --host option to host publicly
 npm run dev --host
 
 ```
