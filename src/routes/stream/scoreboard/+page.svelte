@@ -122,11 +122,11 @@
   div.nickname-box {
     width: 100%;
     height: 100%;
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
     background-color: rgb(120, 120, 120, 0.5);
+    overflow-x: hidden;
   }
 
   div.score-box {
@@ -143,8 +143,7 @@
     padding-inline: 1rem;
     color: white;
     font-family: "Arvo", serif;
-
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   .score {
@@ -152,7 +151,6 @@
     font-size: 3em;
     font-weight: bold;
     font-family: "Arvo", serif;
-    padding-inline: 1rem;
     text-align: center;
     min-width: 1em;
   }
@@ -160,12 +158,13 @@
   li {
     margin: 0px;
     padding: 0px;
-    width: 500px;
-    min-width: fit-content;
-    height: 75px;
+    min-width: 200px;
+    max-width: 750px;
+    height: 85px;
     position: absolute;
     top: 50px;
     overflow: hidden;
+    justify-content: flex-end;
   }
 
   li:nth-of-type(odd) {

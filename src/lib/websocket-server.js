@@ -2,7 +2,7 @@
 import { Server, Socket } from 'socket.io'
 import { defineConfig } from 'vite';
 import AsyncBlockingQueue from './AsyncBlockingQueue.js';
-import { getSavedScore, saveGame } from './scoreboard.js'
+import { getSavedScore, saveGame, generateGameId } from './scoreboard.js'
 
 // jsdoc import game type from scoreboard.js
 /**
@@ -67,20 +67,24 @@ async function scoreboardChangeRequest(changeObject) {
     if ('playerindex' in changeObject) {
         if ('scoreDelta' in changeObject) {
             game.history.push({
-                change: `player ${changeObject.playerindex} scored ${changeObject.scoreDelta}`,
-                state: game.state
+                change: `player ${changeObject.playerindex} scored ${changeObject.scoreDelta > 0 ? '+' : ''}${changeObject.scoreDelta}`,
+                state: { ...game.state }
             });
             game.state.players[changeObject.playerindex].score += changeObject.scoreDelta;
         }
         if ('score' in changeObject) {
             game.history.push({
                 change: `player ${changeObject.playerindex} score updated to ${changeObject.score}`,
-                state: game.state
+                state: { ...game.state }
             });
             game.state.players[changeObject.playerindex].score = changeObject.score;
 
         }
         if ('name' in changeObject) {
+            game.history.push({
+                change: `player ${changeObject.playerindex} name changed to ${changeObject.score}`,
+                state: { ...game.state }
+            });
             game.state.players[changeObject.playerindex].name = changeObject.name;
         }
     }
@@ -88,8 +92,38 @@ async function scoreboardChangeRequest(changeObject) {
         game.scoreboardVisible = changeObject.scoreboardVisible;
     }
     if ('swapSides' in changeObject) {
+        game.history.push({
+            change: `players swapped sides`,
+            state: { ...game.state }
+        });
         let temp = game.state.players[0];
         game.state.players[0] = game.state.players[1];
         game.state.players[1] = temp;
+    }
+    if ('reset' in changeObject) {
+        game = {
+            scoreboardVisible: false,
+            id: generateGameId(),
+            state: {
+                players: [
+                    {
+                        name: 'Player 1',
+                        score: 0
+                    },
+                    {
+                        name: 'Player 2',
+                        score: 0
+                    }
+                ]
+            },
+            history: []
+        }
+    }
+    if ('undo' in changeObject) {
+        if (game.history.length == 0) return;
+        console.log(game.history[game.history.length - 1].state);
+        game.state = { ...game.history[game.history.length - 1].state };
+        game.history.pop();
+
     }
 }

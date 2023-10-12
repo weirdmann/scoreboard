@@ -9,7 +9,7 @@ import AsyncBlockingQueue from './AsyncBlockingQueue.js'
  * @function generateGameId
  * @returns {string} - an unique game id
  * */
-function generateGameId() {
+export function generateGameId() {
     return generate({ length: 3, separator: '-', titlecase: true });
 }
 
@@ -61,12 +61,17 @@ function getTimestamp() {
  * @function getSavedScore
  * @returns {Promise<Game>} */
 export async function getSavedScore() {
-    const file = await open('data/game.json', 'r');
-    const content = await file.readFile('utf8');
-    /** @type {Game} */
-    let data = JSON.parse(content);
-    file.close();
-    return data;
+    try {
+        const file = await open('data/game.json', 'r');
+        const content = await file.readFile('utf8');
+        /** @type {Game} */
+        let data = JSON.parse(content);
+        file.close();
+        return data;
+    } catch (error) {
+        console.log(error)
+        return await createNewGame();
+    }
 }
 
 /** Creates a new game.json file and writes fills it with placeholder values
@@ -74,22 +79,8 @@ export async function getSavedScore() {
  * @returns {Promise<Game>} 
  */
 export async function createNewGame() {
-    // if exists, save old file to /old folder
-    // with timestamp name
-    const oldFile = await open('data/game.json', 'r');
-    /** @type {Game} */
-    let oldData;
-    if (oldFile) {
-        const oldContent = await oldFile.readFile('utf8');
-        oldData = JSON.parse(oldContent);
-        const newFileName = `data/old/game-${oldData.state.players[0].name}vs${oldData.state.players[1].name}-${getTimestamp()}.json`;
-        const newFile = await open(newFileName, 'w', 0o777);
-        await newFile.writeFile(oldContent);
-        newFile.close();
-        oldFile.close();
-    }
 
-    const file = await open('data/game.json', 'w');
+    const file = await open('data/game.json', 'w+');
     /** @type {Game} */
     const newGameData = {
         id: `${getTimestamp()}:${generateGameId()}`,
@@ -205,8 +196,8 @@ export async function changeVisibility(visible) {
 
 /** @param {Game} game */
 export async function saveGame(game) {
-    const newFile = await open('data/game.json', 'w');
-    await newFile.writeFile(JSON.stringify(game, null, 2));
+    const newFile = await open('data/game.json', 'w+');
+    await newFile.writeFile(JSON.stringify(game, null, 2), { encoding: 'utf8' });
     newFile.close();
     return game;
 }

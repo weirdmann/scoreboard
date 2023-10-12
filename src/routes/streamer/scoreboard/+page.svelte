@@ -1,6 +1,5 @@
 <script>
   import { onMount, onDestroy } from "svelte";
-  import { Input, Button, Label } from "sveltestrap";
   import { io } from "socket.io-client";
 
   const socket = io();
@@ -49,12 +48,17 @@
   });
 </script>
 
-<!-- <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-/> -->
 {#if game_data_loaded}
-  <main>
+  <main style="color: rgba(250, 235, 215, 0.447)">
+    <button
+      class="cloo-input"
+      style="background-color: darkred"
+      on:click={async () => {
+        socket.emit(SC_UPD_EVENT, { undo: true });
+      }}
+    >
+      Undo
+    </button>
     {#if game.scoreboardVisible}
       <h1 style="color: green">Scoreboard is visible</h1>
     {:else}
@@ -68,6 +72,15 @@
         }}
       >
         Show Scoreboard
+      </button>
+      <button
+        class="cloo-input"
+        style="background-color: darkred"
+        on:click={async () => {
+          socket.emit(SC_UPD_EVENT, { reset: true });
+        }}
+      >
+        Reset the Game
       </button>
       <button
         class="cloo-input"
@@ -217,7 +230,6 @@
 
 <style>
   :root {
-    color: rgba(250, 235, 215, 0.447);
     font-size: 1.2rem;
     min-width: 960px;
   }
