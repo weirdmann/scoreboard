@@ -2,7 +2,10 @@
 
 ## Install
 
+Install the latest node.js from https://nodejs.org/en/download
+
 ```bash
+
 # clone repo on your machine
 git clone https://github.com/weirdmann/scoreboard
 
