@@ -1,6 +1,20 @@
 <script>
   import { onMount, onDestroy } from "svelte";
-  import { fly, fade } from "svelte/transition";
+  import SpringedNumber from "$lib/SpringedNumber.svelte";
+  import { io } from "socket.io-client";
+
+  const socket = io();
+  socket.on("connect", () => {
+    console.log("connected");
+  });
+  socket.on("scoreboardupdate", handleScoreboardUpdate);
+  1;
+  /** @param {Game} wsObj */
+  async function handleScoreboardUpdate(wsObj) {
+    game_data_loaded = true;
+    game = wsObj;
+  }
+
   /**
    * @typedef {import('$lib/scoreboard.js').GameState} GameState
    */
@@ -8,75 +22,61 @@
    * @typedef {import('$lib/scoreboard.js').Game} Game
    */
   /** @type Game */
-  export let game;
+  let game;
+  let game_data_loaded = false;
 
-  async function preload() {
-    const res = await fetch("/stream/scoreboard/score");
-    if (res.ok) {
-      game = await res.json();
-    }
-  }
   onDestroy(() => {
-    clearInterval(fetchInterval);
+    socket.disconnect();
   });
-  let fetchInterval = 0;
   onMount(async () => {
-    fetchInterval = setInterval(async () => {
-      const res = await fetch("/stream/scoreboard/score");
-      if (res.ok) {
-        game = await res.json();
-      }
-    }, 333);
-    console.log("mounted");
-
-    window.addEventListener("keypress", keypress);
+    window.addEventListener("keypress", (e) => keypress(e));
   });
 
-  async function keypress(e) {
-    if (e.key == "1") {
-      let data = {
+  /**
+   * @param {*} event
+   * */
+  function keypress(event) {
+    const SC_UPD_EVENT = "scoreboardChangeRequest";
+
+    if (
+      event.code != "Digit1" &&
+      event.code != "Digit2" &&
+      event.code != "Digit3"
+    )
+      return;
+
+    if (event.code == "Digit1") {
+      event.preventDefault();
+      socket.emit(SC_UPD_EVENT, {
         playerindex: 0,
-        score: Number(game.state.players[0].score + 1),
-      };
-      fetch("/stream/scoreboard/score", {
-        method: "POST",
-        body: JSON.stringify(data),
+        scoreDelta: 1,
       });
-    } else if (e.key == "2") {
-      let data = {
+    } else if (event.code == "Digit2") {
+      event.preventDefault();
+      socket.emit(SC_UPD_EVENT, {
         playerindex: 1,
-        score: Number(game.state.players[1].score + 1),
-      };
-      fetch("/stream/scoreboard/score", {
-        method: "POST",
-        body: JSON.stringify(data),
+        scoreDelta: 1,
       });
-    } else if (e.key == "3") {
-      let data = {
+    } else if (event.code == "Digit3") {
+      event.preventDefault();
+      1;
+      socket.emit(SC_UPD_EVENT, {
         playerindex: 0,
-        score: Number(0),
-      };
-      await fetch("/stream/scoreboard/score", {
-        method: "POST",
-        body: JSON.stringify(data),
+        score: 0,
       });
-      data = {
+      socket.emit(SC_UPD_EVENT, {
         playerindex: 1,
-        score: Number(0),
-      };
-      await fetch("/stream/scoreboard/score", {
-        method: "POST",
-        body: JSON.stringify(data),
+        score: 0,
       });
     }
   }
 </script>
 
 <main>
-  {#await preload() then _}
+  {#if game_data_loaded}
     {#if game.scoreboardVisible}
       {#if game.state.players.length > 0}
-        <ul transition:fade={{ duration: 1000 }}>
+        <ul>
           {#each game.state.players as player}
             <li class="score-container">
               <div class="nickname-box">
@@ -84,10 +84,12 @@
               </div>
               <div class="score-box">
                 <span class="score">
-                  {#key player.score}
-                    <span in:fly={{ y: 50, duration: 500 }}>{player.score}</span
-                    >
-                  {/key}
+                  <!-- <span> -->
+                  <SpringedNumber
+                    count={player.score}
+                    spring_options={{ damping: 0.9, stiffness: 0.9 }}
+                  />
+                  <!-- </span> -->
                 </span>
               </div>
             </li>
@@ -95,7 +97,7 @@
         </ul>
       {/if}
     {/if}
-  {/await}
+  {/if}
 </main>
 
 <style>
@@ -158,11 +160,12 @@
   li {
     margin: 0px;
     padding: 0px;
-    width: 400px;
+    width: 500px;
     min-width: fit-content;
     height: 75px;
     position: absolute;
     top: 50px;
+    overflow: hidden;
   }
 
   li:nth-of-type(odd) {

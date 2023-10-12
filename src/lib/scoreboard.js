@@ -3,6 +3,8 @@ import { generate } from 'generate-passphrase'
 import { v4 } from 'uuid';
 import { time } from 'node:console';
 
+import AsyncBlockingQueue from './AsyncBlockingQueue.js'
+
 /** Generates a new game id
  * @function generateGameId
  * @returns {string} - an unique game id
@@ -199,4 +201,12 @@ export async function changeVisibility(visible) {
     await newFile.writeFile(JSON.stringify(data));
     newFile.close();
     return data;
+}
+
+/** @param {Game} game */
+export async function saveGame(game) {
+    const newFile = await open('data/game.json', 'w');
+    await newFile.writeFile(JSON.stringify(game, null, 2));
+    newFile.close();
+    return game;
 }

@@ -10,11 +10,7 @@
     <slot />
   </main>
 
-  <footer>
-    <p>
-      visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit
-    </p>
-  </footer>
+  <footer />
 </div>
 
 <style>
@@ -22,6 +18,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: linear-gradient(180deg, rgb(25, 13, 1) 0%, rgb(0, 0, 0) 100%);
   }
 
   main {
