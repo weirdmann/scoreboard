@@ -1,6 +1,8 @@
 <script>
   import { onMount, onDestroy } from "svelte";
   import { io } from "socket.io-client";
+  // @ts-ignore
+  import * as Types from "$lib/jsdoc-types.js";
 
   const socket = io();
   socket.on("connect", () => {
@@ -8,12 +10,12 @@
   });
   socket.on("scoreboardupdate", handleScoreboardUpdate);
   1;
-  /** @param {Game} wsObj */
+  /** @param {Types.Game} wsObj */
   async function handleScoreboardUpdate(wsObj) {
     game_data_loaded = true;
     game = wsObj;
   }
-  /** @type Game */
+  /** @type {Types.Game} */
   let game;
   let game_data_loaded = false;
   let SC_UPD_EVENT = "scoreboardChangeRequest";
@@ -21,22 +23,6 @@
   let player1name;
   /** @type {string}*/
   let player2name;
-  /**
-   * @typedef {import('$lib/scoreboard.js').GameState} GameState
-   */
-  /**
-   * @typedef {import('$lib/scoreboard.js').Game} Game
-   */
-  /** @typedef PlayerNameUpdate
-   * @property {number} playerIndex - the index of the player to update
-   * @property {string} name - the new name
-   */
-
-  /**
-   * @typedef {Object} ScoreUpdate
-   * @property {number} playerindex
-   * @property {number} score
-   */
 
   let fetchInterval1 = 0;
   onDestroy(() => {
@@ -56,6 +42,7 @@
       on:click={async () => {
         socket.emit(SC_UPD_EVENT, { undo: true });
       }}
+      hidden
     >
       Undo
     </button>

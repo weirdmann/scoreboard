@@ -1,7 +1,10 @@
+
 import { open } from 'node:fs/promises';
 import { generate } from 'generate-passphrase'
 import { v4 } from 'uuid';
 import { time } from 'node:console';
+// @ts-ignore
+import * as Types from "./jsdoc-types.js";
 
 import AsyncBlockingQueue from './AsyncBlockingQueue.js'
 
@@ -27,44 +30,17 @@ function getTimestamp() {
     return `${year}${month}${day}${hour}${minute}${second}`;
 }
 
-/**
- * @typedef Player
- * @type {object}
- * @property {string} name - player name.
- * @property {number} score - player score.
- */
 
-/**
- * @typedef GameState
- * @type {object}
- * @property {Array<Player>} players - an ID.
- */
-
-/** 
- * @typedef Game
- * @type {object} 
- * @property {boolean} scoreboardVisible - whether the scoreboard is visible
- * @property {string} id - an unique game id
- * @property {GameState} state - the current game state
- * @property {Array<GameHistory>} history of game states
- */
-
-/**
- * @typedef GameHistory
- * @type {object}
- * @property {string} change - the change that was made
- * @property {GameState} state - the state before the change
- */
 
 /** Gets the saved score from the file system.
  * @async
  * @function getSavedScore
- * @returns {Promise<Game>} */
+ * @returns {Promise<Types.Game>} */
 export async function getSavedScore() {
     try {
         const file = await open('data/game.json', 'r');
         const content = await file.readFile('utf8');
-        /** @type {Game} */
+        /** @type {Types.Game} */
         let data = JSON.parse(content);
         file.close();
         return data;
@@ -74,35 +50,43 @@ export async function getSavedScore() {
     }
 }
 
+/** @returns {Types.Game} */
+function newGame() {
+    this.scoreboardVisible = false;
+    this.id = `${getTimestamp()}:${generateGameId()}`;
+    this.state = {
+        players: [{
+            name: 'Player 1',
+            score: 0
+        }, {
+            name: 'Player 2',
+            score: 0
+        }]
+    };
+    /** @type {Array<Types.GameHistory>} */
+    this.history = [
+        {
+            change: 'init',
+            state: {
+                players: [
+                    { name: '', score: 0 },
+                    { name: '', score: 0 },
+                ]
+            }
+        }
+    ];
+    return this;
+}
+
 /** Creates a new game.json file and writes fills it with placeholder values
  * @async @function createNewGame
- * @returns {Promise<Game>} 
+ * @returns {Promise<Types.Game>} 
  */
 export async function createNewGame() {
 
     const file = await open('data/game.json', 'w+');
-    /** @type {Game} */
-    const newGameData = {
-        id: `${getTimestamp()}:${generateGameId()}`,
-        scoreboardVisible: false,
-        state: {
-            players: [
-                { name: 'player1', score: 0 },
-                { name: 'player2', score: 0 },
-            ]
-        },
-        history: [
-            {
-                change: 'init',
-                state: {
-                    players: [
-                        { name: '', score: 0 },
-                        { name: '', score: 0 },
-                    ]
-                }
-            }
-        ]
-    }
+    /** @type {Types.Game} */
+    const newGameData = newGame();
     const content = JSON.stringify(newGameData);
     await file.writeFile(content);
     file.close();
@@ -118,7 +102,7 @@ export async function createNewGame() {
  * @param {number} score - the new score
  */
 export async function updateScore(playerIndex, score) {
-    /** @type {Game} */
+    /** @type {Types.Game} */
     let data = await getSavedScore();
     // sanitize input
     if (playerIndex < 0 || playerIndex > data.state.players.length - 1) {
@@ -138,10 +122,10 @@ export async function updateScore(playerIndex, score) {
 /** Switch sides - swap players
  * @async
  * @function switchSides
- * @returns {Promise<Game>}
+ * @returns {Promise<Types.Game>}
  */
 export async function switchSides() {
-    /** @type {Game} */
+    /** @type {Types.Game} */
     let data = await getSavedScore();
     data.history.push({
         change: 'players switched sides',
@@ -162,7 +146,7 @@ export async function switchSides() {
  * @param {string} name - the new name
  */
 export async function updatePlayerName(playerIndex, name) {
-    /** @type {Game} */
+    /** @type {Types.Game} */
     let data = await getSavedScore();
     // sanitize input
     if (playerIndex < 0 || playerIndex > data.state.players.length - 1) {
@@ -185,7 +169,7 @@ export async function updatePlayerName(playerIndex, name) {
  * @param {boolean} visible - whether the scoreboard should be visible
  */
 export async function changeVisibility(visible) {
-    /** @type {Game} */
+    /** @type {Types.Game} */
     let data = await getSavedScore();
     const newFile = await open('data/game.json', 'w');
     data.scoreboardVisible = visible;
@@ -194,7 +178,7 @@ export async function changeVisibility(visible) {
     return data;
 }
 
-/** @param {Game} game */
+/** @param {Types.Game} game */
 export async function saveGame(game) {
     const newFile = await open('data/game.json', 'w+');
     await newFile.writeFile(JSON.stringify(game, null, 2), { encoding: 'utf8' });
