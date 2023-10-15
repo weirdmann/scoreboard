@@ -22,3 +22,9 @@ npm install
 npm run dev
 
 ```
+
+## TODO
+
+- fade in effect on page refresh
+- keyboard shorcuts on /streamer/scoreboard should only work when no inputs are focused
+- dodać wersję z wynikami na środku

@@ -17,6 +17,7 @@
  * @type {object} 
  * @property {boolean} scoreboardVisible - whether the scoreboard is visible
  * @property {string} id - an unique game id
+ * @property {string} type - the type of game
  * @property {GameState} state - the current game state
  * @property {Array<GameHistory>} history of game states
  * @constructor

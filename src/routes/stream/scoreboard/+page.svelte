@@ -2,6 +2,7 @@
   import { onMount, onDestroy } from "svelte";
   import SpringedNumber from "$lib/SpringedNumber.svelte";
   import { io } from "socket.io-client";
+  import { fade } from "svelte/transition";
 
   const socket = io();
   socket.on("connect", () => {
@@ -78,7 +79,7 @@
       {#if game.state.players.length > 0}
         <ul>
           {#each game.state.players as player}
-            <li class="score-container">
+            <li transition:fade class="score-container">
               <div class="nickname-box">
                 <span class="nickname">{player.name}</span>
               </div>
@@ -87,7 +88,7 @@
                   <!-- <span> -->
                   <SpringedNumber
                     count={player.score}
-                    spring_options={{ damping: 0.9, stiffness: 0.9 }}
+                    spring_options={{ damping: 0.4, stiffness: 0.1 }}
                   />
                   <!-- </span> -->
                 </span>
@@ -97,13 +98,21 @@
         </ul>
       {/if}
     {/if}
+    <div class="game-type-pos">
+      <div class="game-type-container" hidden={game.type.length == 0}>
+        <span class="game-type">{game.type}</span>
+      </div>
+    </div>
   {/if}
 </main>
 
 <style>
   :root {
     box-sizing: border-box;
-    background-color: black;
+    background-color: transparent;
+    --nickname-bg: rgb(50, 50, 50, 0.95);
+    --score-bg: rgb(100, 100, 100, 0.95);
+    --game-type-bg: rgb(50, 50, 50, 0.95);
   }
 
   main {
@@ -122,7 +131,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: rgb(120, 120, 120, 0.5);
+    background-color: rgb(50, 50, 50, 0.95);
     overflow-x: hidden;
   }
 
@@ -131,7 +140,7 @@
     width: fit-content;
     display: flex;
     align-items: center;
-    background-color: rgb(180, 180, 180, 0.5);
+    background-color: rgb(100, 100, 100, 0.95);
     transition: width 1s ease-in-out;
   }
 
@@ -139,15 +148,16 @@
     display: block;
     padding-inline: 1rem;
     color: white;
-    font-family: sans-serif;
-    font-size: 2em;
+    font-family: Blowbrush, sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5em;
   }
 
   .score {
     color: white;
     font-size: 3em;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: Blowbrush, sans-serif;
     text-align: center;
     min-width: 1em;
   }
@@ -167,16 +177,43 @@
   li:nth-of-type(odd) {
     left: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
 
   li:nth-of-type(even) {
     right: 0;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 
   li:nth-of-type(even) div.nickname-box {
     justify-content: flex-start;
+  }
+
+  div.game-type-pos {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div.game-type-container {
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    bottom: 0;
+    padding-inline: 4rem;
+    padding-block-start: 0.5rem;
+    padding-block-end: 0.5rem;
+    text-align: center;
+    font-family: Blowbrush, sans-serif;
+    text-transform: uppercase;
+    font-size: 3em;
+    background-color: var(--game-type-bg);
+    clip-path: polygon(0 100%, 100% 100%, 95% 0, 5% 0);
+    overflow: hidden;
   }
 </style>

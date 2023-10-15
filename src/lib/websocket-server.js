@@ -2,17 +2,13 @@
 import { Server, Socket } from 'socket.io'
 import { defineConfig } from 'vite';
 import AsyncBlockingQueue from './AsyncBlockingQueue.js';
-import { getSavedScore, saveGame, generateGameId } from './scoreboard.js'
-
+import { getSavedScore, saveGame, generateGameId, newGame } from './scoreboard.js'
+// @ts-ignore
+import * as Types from './jsdoc-types.js';
 // jsdoc import game type from scoreboard.js
-/**
-   * @typedef {import('$lib/scoreboard.js').GameState} GameState
-   */
-/**
- * @typedef {import('$lib/scoreboard.js').Game} Game
- */
 
-/** @type {Game} */
+
+/** @type {Types.Game} */
 let game;
 
 let queue = new AsyncBlockingQueue();
@@ -64,6 +60,9 @@ async function updateScoreboard(socket) {
 
 /** @param {*} changeObject */
 async function scoreboardChangeRequest(changeObject) {
+    if ('reset' in changeObject) {
+        game = newGame();
+    }
     if ('playerindex' in changeObject) {
         if ('scoreDelta' in changeObject) {
             game.history.push({
@@ -100,30 +99,13 @@ async function scoreboardChangeRequest(changeObject) {
         game.state.players[0] = game.state.players[1];
         game.state.players[1] = temp;
     }
-    if ('reset' in changeObject) {
-        game = {
-            scoreboardVisible: false,
-            id: generateGameId(),
-            state: {
-                players: [
-                    {
-                        name: 'Player 1',
-                        score: 0
-                    },
-                    {
-                        name: 'Player 2',
-                        score: 0
-                    }
-                ]
-            },
-            history: []
-        }
-    }
     if ('undo' in changeObject) {
         if (game.history.length == 0) return;
         console.log(game.history[game.history.length - 1].state);
         game.state = { ...game.history[game.history.length - 1].state };
         game.history.pop();
-
+    }
+    if ('type' in changeObject) {
+        game.type = changeObject.type;
     }
 }

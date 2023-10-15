@@ -51,31 +51,32 @@ export async function getSavedScore() {
 }
 
 /** @returns {Types.Game} */
-function newGame() {
-    this.scoreboardVisible = false;
-    this.id = `${getTimestamp()}:${generateGameId()}`;
-    this.state = {
-        players: [{
-            name: 'Player 1',
-            score: 0
-        }, {
-            name: 'Player 2',
-            score: 0
-        }]
-    };
-    /** @type {Array<Types.GameHistory>} */
-    this.history = [
-        {
-            change: 'init',
-            state: {
-                players: [
-                    { name: '', score: 0 },
-                    { name: '', score: 0 },
-                ]
+export function newGame() {
+    return {
+        scoreboardVisible: false,
+        id: `${getTimestamp()}:${generateGameId()}`,
+        type: '',
+        state: {
+            players: [{
+                name: 'Player 1',
+                score: 0
+            }, {
+                name: 'Player 2',
+                score: 0
+            }]
+        },
+        history: [
+            {
+                change: 'init',
+                state: {
+                    players: [
+                        { name: '', score: 0 },
+                        { name: '', score: 0 },
+                    ]
+                }
             }
-        }
-    ];
-    return this;
+        ]
+    }
 }
 
 /** Creates a new game.json file and writes fills it with placeholder values

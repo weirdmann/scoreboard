@@ -23,6 +23,8 @@
   let player1name;
   /** @type {string}*/
   let player2name;
+  /** @type {string}*/
+  let gameType = "";
 
   let fetchInterval1 = 0;
   onDestroy(() => {
@@ -30,8 +32,50 @@
   });
 
   onMount(async () => {
-    console.log("mounted");
+    window.addEventListener("keypress", (e) => keypress(e));
   });
+
+  /**
+   * @param {*} event
+   * */
+  function keypress(event) {
+    const SC_UPD_EVENT = "scoreboardChangeRequest";
+
+    if (
+      event.code != "Digit1" &&
+      event.code != "Digit2" &&
+      event.code != "Digit3"
+    )
+      return;
+
+    // return if any of the input elements is focused
+    if (document.activeElement?.tagName.toLowerCase() == "input") return;
+
+    if (event.code == "Digit1") {
+      event.preventDefault();
+      socket.emit(SC_UPD_EVENT, {
+        playerindex: 0,
+        scoreDelta: 1,
+      });
+    } else if (event.code == "Digit2") {
+      event.preventDefault();
+      socket.emit(SC_UPD_EVENT, {
+        playerindex: 1,
+        scoreDelta: 1,
+      });
+    } else if (event.code == "Digit3") {
+      event.preventDefault();
+      1;
+      socket.emit(SC_UPD_EVENT, {
+        playerindex: 0,
+        score: 0,
+      });
+      socket.emit(SC_UPD_EVENT, {
+        playerindex: 1,
+        score: 0,
+      });
+    }
+  }
 </script>
 
 {#if game_data_loaded}
@@ -99,6 +143,24 @@
             });
           }}>Set</button
         >
+      </div>
+      <div>
+        <form
+          on:submit|preventDefault={() => {
+            socket.emit(SC_UPD_EVENT, {
+              type: gameType,
+            });
+          }}
+        >
+          <label for="gameType">Game Type</label><br />
+          <input
+            class="cloo-input"
+            type="text"
+            placeholder={game.type}
+            bind:value={gameType}
+          />
+          <button class="cloo-input" type="submit">Set</button>
+        </form>
       </div>
       <div>
         <label for="player2">Player 2 (right)</label><br />

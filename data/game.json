@@ -1,45 +1,1381 @@
 {
   "scoreboardVisible": true,
-  "id": "Fuliginous-Affied-112",
+  "id": "231015192753:153-Involuntarily-202",
+  "type": "FT 10",
   "state": {
     "players": [
       {
-        "name": "Player 1",
-        "score": 0
+        "name": "Ktokolwiek",
+        "score": 2
       },
       {
-        "name": "Player 2",
-        "score": 0
+        "name": "Cokolwiek 😁✈️✈️",
+        "score": 14
       }
     ]
   },
   "history": [
     {
-      "change": "player 0 scored +1",
+      "change": "init",
       "state": {
         "players": [
           {
-            "name": "Player 1",
+            "name": "",
             "score": 0
           },
           {
-            "name": "Player 2",
+            "name": "",
             "score": 0
           }
         ]
       }
     },
     {
-      "change": "player 0 scored -1",
+      "change": "player 0 scored +1",
       "state": {
         "players": [
           {
-            "name": "Player 1",
-            "score": 0
+            "name": "Ktokolwiek",
+            "score": 2
           },
           {
-            "name": "Player 2",
-            "score": 0
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 name changed to undefined",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 name changed to undefined",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 score updated to 0",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 score updated to 0",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 score updated to 0",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 score updated to 0",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 score updated to 0",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 score updated to 0",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 score updated to 0",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 score updated to 0",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 name changed to undefined",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 1 scored -1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "players swapped sides",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "players swapped sides",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "players swapped sides",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "players swapped sides",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "players swapped sides",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "players swapped sides",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
+          }
+        ]
+      }
+    },
+    {
+      "change": "players swapped sides",
+      "state": {
+        "players": [
+          {
+            "name": "Ktokolwiek",
+            "score": 2
+          },
+          {
+            "name": "Cokolwiek 😁✈️✈️",
+            "score": 14
           }
         ]
       }

@@ -6,9 +6,7 @@
 
 <header>
   <div class="corner">
-    <a href="https://kit.svelte.dev">
-      <img src={logo} alt="SvelteKit" />
-    </a>
+    <img src={logo} alt="SvelteKit" />
   </div>
 
   <nav>
@@ -36,11 +34,7 @@
     </svg>
   </nav>
 
-  <div class="corner">
-    <a href="https://github.com/weirdmann/scoreboard">
-      <img src={github} alt="GitHub" />
-    </a>
-  </div>
+  <div class="corner" />
 </header>
 
 <style>

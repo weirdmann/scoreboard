@@ -1,7 +1,7 @@
 <script>
-  import Counter from "./Counter.svelte";
   import welcome from "$lib/images/svelte-welcome.webp";
   import welcome_fallback from "$lib/images/svelte-welcome.png";
+  import github from "$lib/images/github.svg";
 </script>
 
 <svelte:head>
@@ -18,6 +18,9 @@
       </picture>
     </span>
   </h1>
+  <a href="https://github.com/weirdmann/scoreboard">
+    <img src={github} alt="GitHub" />
+  </a>
 </section>
 
 <style>
