@@ -91,9 +91,9 @@
       Undo
     </button>
     {#if game.scoreboardVisible}
-      <h1 style="color: green">Scoreboard is visible</h1>
+      <h2 style="color: green">Scoreboard is visible</h2>
     {:else}
-      <h1 style="color: red">Scoreboard is hidden!</h1>
+      <h2 style="color: red">Scoreboard is hidden!</h2>
     {/if}
     <div class="visibility-controls">
       <button
@@ -122,7 +122,7 @@
         Hide Scoreboard
       </button>
     </div>
-    <h3>Players</h3>
+    <h2>Players</h2>
     <div class="players">
       <div>
         <label for="player1">Player 1 (left)</label><br />
@@ -183,35 +183,35 @@
         >
       </div>
     </div>
-    <h1>
-      <div class="score-container">
+    <div class="score-container">
+      <div>
+        <span class="score-playername">
+          {game.state.players[0].name}
+        </span>
+        <div class="score-controls">
+          <button
+            class="cloo-input"
+            on:click={() => {
+              socket.emit(SC_UPD_EVENT, {
+                playerindex: 0,
+                scoreDelta: 1,
+              });
+            }}>+</button
+          >
+          <span class="score-num">
+            {game.state.players[0].score}
+          </span>
+          <button
+            class="cloo-input"
+            on:click={() => {
+              socket.emit(SC_UPD_EVENT, {
+                playerindex: 0,
+                scoreDelta: -1,
+              });
+            }}>-</button
+          >
+        </div>
         <div>
-          <div class="score-playername">
-            {game.state.players[0].name}
-          </div>
-          <div class="score-controls">
-            <button
-              class="cloo-input"
-              on:click={() => {
-                socket.emit(SC_UPD_EVENT, {
-                  playerindex: 0,
-                  scoreDelta: 1,
-                });
-              }}>+1</button
-            >
-            <span class="score-num">
-              {game.state.players[0].score}
-            </span>
-            <button
-              class="cloo-input"
-              on:click={() => {
-                socket.emit(SC_UPD_EVENT, {
-                  playerindex: 0,
-                  scoreDelta: -1,
-                });
-              }}>-1</button
-            >
-          </div>
           <button
             class="cloo-input"
             style="margin-top:1rem"
@@ -223,8 +223,10 @@
             }}>zero</button
           >
         </div>
+      </div>
+      <div>
         <button
-          class="cloo-input"
+          class="cloo-input swap-button"
           style="font-size:0.5em"
           on:click={() => {
             socket.emit(SC_UPD_EVENT, {
@@ -232,46 +234,46 @@
             });
           }}>swap<br />sides</button
         >
-        <div>
-          <div>
-            {game.state.players[1].name}
-          </div>
-          <div class="score-controls">
-            <button
-              class="cloo-input"
-              on:click={() => {
-                socket.emit(SC_UPD_EVENT, {
-                  playerindex: 1,
-                  scoreDelta: 1,
-                });
-              }}>+</button
-            >
-            <span class="score-num">
-              {game.state.players[1].score}
-            </span>
-            <button
-              class="cloo-input"
-              on:click={() => {
-                socket.emit(SC_UPD_EVENT, {
-                  playerindex: 1,
-                  scoreDelta: -1,
-                });
-              }}>-</button
-            >
-          </div>
+      </div>
+      <div>
+        <span class="score-playername">
+          {game.state.players[1].name}
+        </span>
+        <div class="score-controls">
           <button
             class="cloo-input"
-            style="margin-top:1rem"
             on:click={() => {
               socket.emit(SC_UPD_EVENT, {
                 playerindex: 1,
-                score: 0,
+                scoreDelta: 1,
               });
-            }}>zero</button
+            }}>+</button
+          >
+          <span class="score-num">
+            {game.state.players[1].score}
+          </span>
+          <button
+            class="cloo-input"
+            on:click={() => {
+              socket.emit(SC_UPD_EVENT, {
+                playerindex: 1,
+                scoreDelta: -1,
+              });
+            }}>-</button
           >
         </div>
+        <button
+          class="cloo-input"
+          style="margin-top:1rem"
+          on:click={() => {
+            socket.emit(SC_UPD_EVENT, {
+              playerindex: 1,
+              score: 0,
+            });
+          }}>zero</button
+        >
       </div>
-    </h1>
+    </div>
   </main>
 {:else}
   <h1>Loading...</h1>
@@ -279,59 +281,88 @@
 
 <style>
   :root {
-    font-size: 1.2rem;
-    min-width: 960px;
+    font-size: 1rem;
+    /* min-width: 420px; */
+  }
+
+  h2 {
+    text-align: center;
   }
 
   .cloo-input {
     background-color: rgb(16, 11, 8);
     color: antiquewhite;
-    /* border: 1px solid rgb(84, 63, 35); */
+    border: 1px solid rgb(84, 63, 35);
     border-radius: 1rem;
   }
 
   button {
-    padding-inline: 2rem;
+    padding-inline: 1rem;
     padding-block: 1rem;
   }
 
   input {
-    padding-inline: 2rem;
-    padding-block: 1rem;
-    margin-bottom: 2rem;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    margin-bottom: 1rem;
+    width: 5em;
+  }
+
+  label {
+    font-size: 0.8em;
   }
 
   .visibility-controls {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 2rem;
   }
 
   .score-container {
     display: flex;
-    gap: 0.5em;
+    gap: 1rem;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 
   .score-controls {
     display: flex;
-    gap: 0.5em;
+    gap: 1ex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 
+  .score-playername {
+    font-size: 1rem;
+  }
+
   .score-num {
-    font-size: 4rem;
+    font-size: 1rem;
+    width: 2ex;
     font-family: Consolas;
+  }
+
+  .score-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swap-button {
+    font-size: 0.5em;
+    padding-inline: 0.5rem;
+    padding-block: 0.5rem;
+    height: 4em;
   }
 
   div.players {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
 </style>

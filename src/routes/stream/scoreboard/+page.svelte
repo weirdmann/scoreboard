@@ -110,13 +110,22 @@
   :root {
     box-sizing: border-box;
     background-color: transparent;
-    --nickname-bg: rgb(50, 50, 50, 0.95);
-    --score-bg: rgb(100, 100, 100, 0.95);
-    --game-type-bg: rgb(50, 50, 50, 0.95);
+    --nickname-bg: rgb(50, 50, 50, 0.8);
+    --score-bg: rgb(100, 100, 100, 0.5);
+    --game-type-bg: rgb(50, 50, 50, 0.8);
+    --text-outline-width: 2px;
+
+    --score-box-shadow-width: 5px;
+    --score-box-shadow-color: black;
   }
 
   main {
     font-family: sans-serif;
+    text-shadow: var(--text-outline-width) var(--text-outline-width) 0 #000,
+      calc(0px - var(--text-outline-width)) var(--text-outline-width) 0 #000,
+      calc(0px - var(--text-outline-width))
+        calc(0px - var(--text-outline-width)) 0 #000,
+      var(--text-outline-width) calc(0px - var(--text-outline-width)) 0 #000;
   }
 
   ul {
@@ -131,7 +140,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: rgb(50, 50, 50, 0.95);
+    background-color: var(--nickname-bg);
     overflow-x: hidden;
   }
 
@@ -140,7 +149,7 @@
     width: fit-content;
     display: flex;
     align-items: center;
-    background-color: rgb(100, 100, 100, 0.95);
+    background-color: var(--score-bg);
     transition: width 1s ease-in-out;
   }
 
@@ -167,23 +176,25 @@
     padding: 0px;
     min-width: 200px;
     max-width: 750px;
-    height: 85px;
+    height: 75px;
     position: absolute;
-    top: 50px;
+    top: 0px;
     overflow: hidden;
     justify-content: flex-end;
   }
 
   li:nth-of-type(odd) {
-    left: 0;
+    /* left: 0; */
+    right: calc(50% + 10%);
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 
   li:nth-of-type(even) {
-    right: 0;
+    /* right: 0; */
+    left: calc(50% + 10%);
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
 
   li:nth-of-type(even) div.nickname-box {
@@ -192,7 +203,7 @@
 
   div.game-type-pos {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 50px;
@@ -204,16 +215,16 @@
     position: absolute;
     color: white;
     font-size: 2em;
-    bottom: 0;
+    top: 0;
     padding-inline: 4rem;
     padding-block-start: 0.5rem;
     padding-block-end: 0.5rem;
     text-align: center;
     font-family: Blowbrush, sans-serif;
     text-transform: uppercase;
-    font-size: 3em;
+    font-size: 2em;
     background-color: var(--game-type-bg);
-    clip-path: polygon(0 100%, 100% 100%, 95% 0, 5% 0);
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
     overflow: hidden;
   }
 </style>

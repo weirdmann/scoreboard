@@ -28,3 +28,4 @@ npm run dev
 - fade in effect on page refresh
 - keyboard shorcuts on /streamer/scoreboard should only work when no inputs are focused
 - dodać wersję z wynikami na środku
+- dodać outline i cień dookoła pól wyniku i nicku
