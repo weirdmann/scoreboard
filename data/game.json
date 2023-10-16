@@ -5,12 +5,12 @@
   "state": {
     "players": [
       {
-        "name": "Ultra Instinct Potato",
-        "score": 6
+        "name": "Super Akouma",
+        "score": 9
       },
       {
-        "name": "Super Akouma",
-        "score": 10
+        "name": "Ultra Instinct Potato",
+        "score": 8
       }
     ]
   },
@@ -1766,6 +1766,276 @@
           {
             "name": "Super Akouma",
             "score": 10
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored -1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored -1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored -1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored -1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored -1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "players swapped sides",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "players swapped sides",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "players swapped sides",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored +1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored -1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "change": "player 0 scored -1",
+      "state": {
+        "players": [
+          {
+            "name": "Super Akouma",
+            "score": 9
+          },
+          {
+            "name": "Ultra Instinct Potato",
+            "score": 8
           }
         ]
       }
