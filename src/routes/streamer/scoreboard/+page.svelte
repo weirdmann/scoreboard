@@ -201,14 +201,14 @@
   </div>
 
   <a
-    class=""
+    class="ahover"
     href="#"
     on:click|preventDefault={async () => {
       socket.emit(SC_UPD_EVENT, { scoreboardVisible: !game.scoreboardVisible });
     }}><i>> Toggle visibility</i></a
   >
   <a
-    class=""
+    class="ahover"
     href="#"
     on:click|preventDefault={() => {
       socket.emit(SC_UPD_EVENT, {
@@ -217,7 +217,7 @@
     }}><i>> Swap sides</i></a
   >
   <a
-    class="cloo-bg-red"
+    class="cloo-bg-red ahover"
     href="#"
     on:click|preventDefault={async () => {
       socket.emit(SC_UPD_EVENT, { reset: true });
@@ -419,6 +419,7 @@
   }
 
   a {
+    display: inline-block;
     margin-top: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -427,7 +428,7 @@
   }
 
   a:hover {
-    background-color: var(--ctp-mocha-base);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   a:last-of-type {
