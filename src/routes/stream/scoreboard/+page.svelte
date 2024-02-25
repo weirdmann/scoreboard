@@ -158,7 +158,7 @@
     display: block;
     padding-inline: 1rem;
     color: white;
-    font-family: Blowbrush, sans-serif;
+    font-family: sans-serif;
     text-transform: uppercase;
     font-size: 2.5em;
   }
@@ -167,7 +167,7 @@
     color: white;
     font-size: 3em;
     font-weight: bold;
-    font-family: Blowbrush, sans-serif;
+    font-family: sans-serif;
     text-align: center;
     min-width: 1em;
   }
