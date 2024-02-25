@@ -379,7 +379,7 @@
   }
 
   .score {
-    font-size: 2em;
+    font-size: 3em;
     display: flex;
     flex-direction: row;
     width: 100%;
