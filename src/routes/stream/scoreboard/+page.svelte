@@ -121,7 +121,8 @@
 
   main {
     font-family: sans-serif;
-    text-shadow: var(--text-outline-width) var(--text-outline-width) 0 #000,
+    text-shadow:
+      var(--text-outline-width) var(--text-outline-width) 0 #000,
       calc(0px - var(--text-outline-width)) var(--text-outline-width) 0 #000,
       calc(0px - var(--text-outline-width))
         calc(0px - var(--text-outline-width)) 0 #000,
@@ -141,7 +142,7 @@
     justify-content: flex-end;
     align-items: center;
     background-color: var(--nickname-bg);
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   div.score-box {

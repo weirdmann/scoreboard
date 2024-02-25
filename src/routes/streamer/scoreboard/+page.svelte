@@ -210,8 +210,10 @@
   <a
     class=""
     href="#"
-    on:click|preventDefault={async () => {
-      socket.emit(SC_UPD_EVENT, { swap: true });
+    on:click|preventDefault={() => {
+      socket.emit(SC_UPD_EVENT, {
+        swapSides: true,
+      });
     }}><i>> Swap sides</i></a
   >
   <a
@@ -396,6 +398,11 @@
     padding: 0.4em;
   }
 
+  input::placeholder {
+    font-weight: bold;
+    color: var(--ctp-mocha-green);
+  }
+
   .player-grid {
     width: 100%;
     display: grid;
@@ -417,6 +424,10 @@
     padding-bottom: 1em;
 
     text-decoration-color: var(--ctp-mocha-overlay2);
+  }
+
+  a:hover {
+    background-color: var(--ctp-mocha-base);
   }
 
   a:last-of-type {

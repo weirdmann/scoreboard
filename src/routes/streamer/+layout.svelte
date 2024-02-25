@@ -14,11 +14,13 @@
 </div>
 
 <style>
+  @import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
+
   .app {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(180deg, rgb(25, 13, 1) 0%, rgb(0, 0, 0) 100%);
+    background: var(--ctp-mocha-base);
   }
 
   main {
