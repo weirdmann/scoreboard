@@ -2,7 +2,7 @@
 	"name": "scoreboard",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "vite dev --host",
+		"dev": "vite dev",
 		"build": "vite build",
 		"start": "node ./server",
 		"preview": "vite preview",
